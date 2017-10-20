@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.zhaogaofei.imageviewscaletypetest.activities.CenterActivity">
+
+    <!--
+    center
+    居中显示，图片不进行拉伸或者压缩
+    如果图片大小小于ImageView，居中显示
+    如果大于，则只显示图片中间的部分，将其他区域进行裁剪掉
+    -->
+
+    <!--
+    centerCrop
+    目的填充满ImageView
+    图片根据ImageView的宽和高进行拉伸或者压缩，
+    直到其中的长或者宽达到ImageView的长或者宽的最大值，
+    等比例显示，然后将其余部分裁剪掉
+    -->
+
+    <!--
+    centerInside
+    目的将图片完全显示出来
+    按比例缩放原图，直到图片可以完全显示出来，
+    并居于中间显示
+    如果图片小于ImageView则居中显示原图
+    -->
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/big"
+        android:layout_marginBottom="30dp"
+        android:scaleType="centerInside"/>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_launcher"/>
+
+</LinearLayout>

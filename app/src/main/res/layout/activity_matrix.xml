@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.zhaogaofei.imageviewscaletypetest.activities.MatrixActivity">
+
+    <!--
+    图片按真实效果显示，不进行拉伸或者压缩
+    图片小于ImageView是，从左上角开始显示全部图片
+    图片大于ImageView时，从左上角显示，将超出ImageView的部分裁剪掉显示
+    -->
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/big"
+        android:layout_marginBottom="30dp"
+        android:scaleType="matrix"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="matrix"
+        android:src="@mipmap/ic_launcher"/>
+
+</LinearLayout>

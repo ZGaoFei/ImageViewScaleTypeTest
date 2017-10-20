@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.zhaogaofei.imageviewscaletypetest.activities.FitActivity">
+
+    <!--
+    FitStart
+    图片的大小按照ImageView的宽或者高进行拉伸或者压缩，
+    直到有其中一边与ImageView的宽高相同。
+    显示位置居于左或者上显示
+    如果ImageView的宽高为正方形，图片的宽高也为正方形，则进行拉伸或者压缩填充。
+    -->
+
+    <!--
+    FitCenter
+    图片的大小显示与FitStart一致
+    显示位置为中间
+    因为是根据ImageView的宽或者高进行拉伸或者压缩
+    因此显示的位置只能是水平居中或者垂直居中
+    -->
+
+    <!--
+    FitEnd
+    图片的大小显示与FitStart一致
+    显示位置为结尾
+    根据ImageView的长宽和图片的长宽对比
+    -->
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/big"
+        android:layout_marginBottom="30dp"
+        android:scaleType="fitEnd"/>
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="250dp"
+        android:scaleType="fitEnd"
+        android:src="@mipmap/ic_launcher"/>
+
+</LinearLayout>
